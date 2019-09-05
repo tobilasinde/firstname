@@ -2,34 +2,13 @@
 <html>
 	<head>
 		<title>CV</title>
-		<style>
-			body {
-				margin: 20%;
-				margin-top: 2%
-			}
-			h1 {
-				font-family: "arial";
-			}
-			th {
-				background-color: #000000;
-				color: #ffffff;
-			}
-			.ash {
-				background-color: #D1D1D1;
-			}
-			img {
-				border-radius: 50%;
-				text-align: center;
-				margin-left: auto;
-				margin-right: auto;
-				display: block;
-				height: 20%;
-				width: 20%;
-			}
-		</style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<img src="https://res.cloudinary.com/tobilasinde/image/upload/v1566584612/new_vynpha.jpg" alt="myself">
+		<center><img src="https://res.cloudinary.com/tobilasinde/image/upload/v1566584612/new_vynpha.jpg" alt="myself"></center>
 		<table>
 			<caption>
 				<h1>OLASINDE ANTHONY</h1>
@@ -111,5 +90,37 @@
 				</td>
 			</tr>
 		</table>
+		<center><button type="button" onclick="asd()" id="Contact">Contact Me</button></center>
+		<script type="text/javascript">
+     
+			window.onload=function(){
+			document.getElementById('form').style.display="none";
+			}
+		 function asd()
+		 {
+				
+			 document.getElementById("form").style.display="block";
+		 }
+		 function validateEmail() {
+    var emailText = document.getElementById('email').value;
+    var pattern = /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
+    if (pattern.test(emailText)) {
+        return true;
+    } else {
+        alert('Bad email address: ' + emailText);
+        return false;
+    }
+}
+		</script>
+		<form id="form">
+			<fieldset>
+				<legend>CONTACT FORM</legend>
+			Name:<input type="name" placeholder="Enter Name Here" required minlength="4"><br>
+			Email: <input type="email" placeholder="Enter Email Here" required id="email"><br>
+			Title: <input type="text" placeholder="Title"><br>
+			Message: <textarea minlength="20" required></textarea><br>
+			<center><button type="submit" onclick="validateEmail()">Submit</button></center>
+			</fieldset>
+		</form>
 	</body>
 </html>

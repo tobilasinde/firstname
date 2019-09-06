@@ -2,15 +2,19 @@
 <html>
 	<head>
 		<title>CV</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<img src="https://res.cloudinary.com/tobilasinde/image/upload/v1566584612/new_vynpha.jpg" alt="myself" height="100" width="100">
+		<center><img src="https://res.cloudinary.com/tobilasinde/image/upload/v1566584612/new_vynpha.jpg" alt="myself"></center>
 		<table>
 			<caption>
-				<b>OLASINDE ANTHONY</b><br>
+				<h1>OLASINDE ANTHONY</h1>
 				<small>Junior Developer with a passion for learning</small>
 			</caption>
-			<tr>
+			<tr class="ash">
 				<th>CONTACT</th>
 				<td>
 					<ul>
@@ -27,7 +31,7 @@
 				Technology driven, strategically position myself, organization 
 				and environment for the best in terms of service delivery.</ul></td>
 			</tr>
-			<tr>
+			<tr class="ash">
 				<th>EXPERIENCE</th>
 				<td>
 					<ul>
@@ -50,29 +54,29 @@
 				<th>EDUCATION</th>
 				<td>
 					<ul>
-						<li><b>University of Ilorin,</b> Ilorin</small><br>
+						<li><b>University of Ilorin,</b> Ilorin<br>
 						<small>B.Sc Chemistry<br>
 						January 2019 - Present</small>
 						</li>
-						<li><b>Introduction to Computer Science,</b> HavardX</small><br>
+						<li><b>Introduction to Computer Science,</b> HavardX<br>
 						<small>2019</small>
 						</li>
 					</ul>
 				</td>
 			</tr>
-			<tr>
+			<tr class="ash">
 				<th>SKILLS</th>
 				<td>
-					<ul>HTML, CSS<br>JAVASCRIPT, PHP, JAVA, PYTHON<br>Linux Operating System<ul>
+					<ul>HTML, CSS<br>JAVASCRIPT, PHP, JAVA, PYTHON<br>Linux Operating System</ul>
 				</td>	
 			</tr>
 			<tr>
 				<th>LANGUAGES</th>
 				<td>
-					<ul>English, Yoruba and Hausa<ul>
+					<ul>English, Yoruba and Hausa</ul>
 				</td>
 			</tr>
-			<tr>
+			<tr class="ash">
 				<th>PROJECTS</th>
 				<td>
 					<ul>
@@ -86,5 +90,37 @@
 				</td>
 			</tr>
 		</table>
+		<center><button type="button" onclick="asd()" id="Contact">Contact Me</button></center>
+		<script type="text/javascript">
+     
+			window.onload=function(){
+			document.getElementById('form').style.display="none";
+			}
+		 function asd()
+		 {
+				
+			 document.getElementById("form").style.display="block";
+		 }
+		 function validateEmail() {
+    var emailText = document.getElementById('email').value;
+    var pattern = /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
+    if (pattern.test(emailText)) {
+        return true;
+    } else {
+        alert('Bad email address: ' + emailText);
+        return false;
+    }
+}
+		</script>
+		<form id="form">
+			<fieldset>
+				<legend>CONTACT FORM</legend>
+			Name:<input type="name" placeholder="Enter Name Here" required minlength="4"><br>
+			Email: <input type="email" placeholder="Enter Email Here" required id="email"><br>
+			Title: <input type="text" placeholder="Title"><br>
+			Message: <textarea minlength="20" required></textarea><br>
+			<center><button type="submit" onclick="validateEmail()">Submit</button></center>
+			</fieldset>
+		</form>
 	</body>
 </html>
